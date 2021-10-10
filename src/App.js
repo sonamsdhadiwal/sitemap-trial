@@ -1,14 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
-import Routes from './Routes'
-import Navbar from './components/Navbar'
+import { Switch, Route } from 'react-router';
+import Navbar from './components/Navbar';
+import About from './components/About';
+import Projects from './components/Projects';
+import Contact from './components/About';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
       <Navbar />
-   <Routes />
+      <Switch>
+    <Route path='/about' component={About}/>
+    <Route path='/projects' component={Projects} />
+    <Route path='/contact' component={Contact} />
+  </Switch>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
